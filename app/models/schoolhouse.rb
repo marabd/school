@@ -7,7 +7,7 @@ class Schoolhouse < ActiveRecord::Base
 	end
 
 	def school_size
-		if(enrollment >= 2000)
+		if(enrollment > 2000)
 			"large"
 		elsif(enrollment > 800)
 			"medium"

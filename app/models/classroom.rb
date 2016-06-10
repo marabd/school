@@ -7,7 +7,7 @@ class Classroom < ActiveRecord::Base
 	end
 
 	def class_size
-		if(size >= 25)
+		if(size > 25)
 			"large"
 		elsif(size > 18)
 			"medium"
