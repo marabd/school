@@ -1,2 +1,20 @@
-<h1>Schoolhouses#index</h1>
-<p>Find me in app/views/schoolhouses/index.html.erb</p>
+<h1>Schoolhouse</h1>
+<br />
+
+<% if @schoolhouses.any? %>
+	<ul>
+		<h4>Schoolhouses:</h4>
+		<% @schoolhouses.each do |schoolhouse| %>
+			<li>
+				<h4>
+					<%= link_to schoolhouse.name, schoolhouse_path(schoolhouse) %>
+				</h4>
+			</li>
+		<% end %>
+	</ul>	
+<% else %>
+	<h3>There are no schooolhouses, yet. Please add one.</h3>
+<% end %>
+
+<%= link_to 'Create a New Schoolhouse', new_schoolhouse_path %>
+

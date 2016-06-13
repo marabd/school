@@ -1,0 +1,14 @@
+<%= form_for [@schoolhouse, @classroom] do |f| %>
+
+	<%= f.label :name %>
+	<%= f.text_field :name, autofocus: true %>
+
+	<%= f.label :teacher %>
+	<%= f.text_field :teacher %>
+
+	<%= f.label :size %>
+	<%= f.text_field :size %>
+
+	<%= f.submit class: "waves-effect waves-light btn" %>
+
+<% end %>

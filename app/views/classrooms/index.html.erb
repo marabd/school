@@ -1,2 +1,24 @@
-<h1>Classrooms#index</h1>
-<p>Find me in app/views/classrooms/index.html.erb</p>
+<h1><%= @schoolhouse.name %> Classrooms</h1>
+<br />
+
+<% if @classrooms.any? %>
+	<div class ="row">
+		<h4>Classrooms:</h4>
+		<%= @classrooms.each do |classroom| %>
+			<div class="col s12 m6 l4">
+				<div class ="card">
+					<div class="card-content">
+						<h6><%= classroom.name %></h6>
+					</div>
+					<div class="card-action">
+						<%= link_to 'View Classroom', schoolhouse_classroom_path(@schoolhouse, classroom) %>
+					</div>
+				</div>
+			</div>
+		<% end %>
+	</div>
+<% else %>
+	<h3>There are no classrooms, yet. Please add one.</h3>
+<% end %>
+
+<%= link_to 'Create a New Classroom', new_schoolhouse_classroom_path(@schoolhouse) %>

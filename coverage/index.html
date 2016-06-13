@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-06-10T09:27:41-06:00">2016-06-10T09:27:41-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-06-12T15:49:05-06:00">2016-06-12T15:49:05-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -491,7 +491,7 @@
         <li class="missed" data-hits="0" data-linenumber="26">
           
           
-          <code class="ruby">  	if @classroom.update(class_params)</code>
+          <code class="ruby">  	if @classroom.update(classroom_params)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="27">
@@ -599,7 +599,7 @@
         <li class="missed" data-hits="0" data-linenumber="44">
           
           
-          <code class="ruby">  	params.require(:classroom).permit(:name, :level, :size)</code>
+          <code class="ruby">  	params.require(:classroom).permit(:name, :teacher, :size)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="45">
@@ -623,7 +623,7 @@
         <li class="missed" data-hits="0" data-linenumber="48">
           
           
-          <code class="ruby">  	@classroom = Classroom.find_by_id(params[:id])</code>
+          <code class="ruby">  	@classroom = schoolhouse.classrooms.find(params[:id])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="49">
@@ -647,7 +647,7 @@
         <li class="missed" data-hits="0" data-linenumber="52">
           
           
-          <code class="ruby">  	@schoolhouse = Schoolhouse.find_by_id(params[:id])</code>
+          <code class="ruby">    @schoolhouse = Schoolhouse.find(params[:schoolhouse_id])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="53">

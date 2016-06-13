@@ -6,6 +6,7 @@ class SchoolhousesController < ApplicationController
   end
   
   def show
+    @classrooms = @schoolhouse.classrooms
   end
 
   def new
@@ -44,6 +45,10 @@ class SchoolhousesController < ApplicationController
 
   def schoolhouse
   	@schoolhouse = Schoolhouse.find(params[:id])
+  end
+
+  def classroom
+    @classroom = Classroom.find(params[:id])
   end
 
   def schoolhouse_params
